@@ -65,6 +65,7 @@ def upload_file():
             text = parser.from_file('{}'.format(j))
             text=text['content']
             # print(str(text))
+            #regex for email and phone number
             em= re.compile(r'(\b[\w.]+@+[\w.]+.+[\w.]\b)')
             ph=re.compile(r'(?<!\d)(?:\+91|91)?\W*0?(?P<mobile>[789]\d{9})(?!\d)')
             email=em.findall(text)
